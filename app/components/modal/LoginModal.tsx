@@ -34,7 +34,7 @@ const LoginModal = () => {
         }
     } = useForm<FieldValues>({
         defaultValues: {
-            name: '',
+            email: '',
             password: ''
         }
     });
@@ -94,13 +94,13 @@ const LoginModal = () => {
                 icon={FcGoogle}
                 outline
                 label="Continue with Google"
-                onClick={() => { }}
+                onClick={() => signIn('google')}
             />
             <Button
                 icon={AiFillGithub}
                 outline
                 label="Continue with Github"
-                onClick={() => { }}
+                onClick={() => signIn('github')}
             />
             <div className="text-neutral-500 text-center mt-4 font-light">
                 <div className="flex flex-row items-center gap-2 text-center justify-center">
